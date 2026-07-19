@@ -443,6 +443,10 @@ For adding IP to 2nd interface so that it can be used for Internet access and fi
    ~/openshift-install create manifests --dir ~/ocp-install
    ```
 
+<img width="702" height="117" alt="image" src="https://github.com/user-attachments/assets/dbca02c5-2d76-4b71-b3de-6c389832e919" />
+
+
+
    > A warning is shown about making the control plane nodes schedulable. It is up to you if you want to run workloads on the Control Plane nodes. If you dont want to you can disable this with:
    > `sed -i 's/mastersSchedulable: true/mastersSchedulable: false/' ~/ocp-install/manifests/cluster-scheduler-02-config.yml`.
    > Make any other custom changes you like to the core Kubernetes manifest files.
