@@ -153,6 +153,9 @@
    export KUBE_EDITOR="vim"
    ```
 
+For adding IP to 2nd interface so that it can be used for Internet access and firewall rule will be added to allow internet on external but block at internal
+#nmcli connection add con-name ens192 type ethernet autoconnect yes ipv4.addresses 192.168.22.1/24
+
 1. Set a Static IP for OCP network interface `nmtui-edit ens224` or edit `/etc/sysconfig/network-scripts/ifcfg-ens224`
 
    - **Address**: 192.168.22.1
@@ -177,6 +180,7 @@
    ```bash
    firewall-cmd --get-active-zones
    ```
+#You may need to restart NetworkManager >> systemctl restart NetworkManager
 
    Set masquerading (source-nat) on the both zones.
 
